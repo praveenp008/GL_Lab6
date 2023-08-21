@@ -1,7 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:h2:mem:student_db
-    username: student
-    password: welcome
-server:
-  port: 8088

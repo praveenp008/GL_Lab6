@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.greatlearning.student.model.Student;
 
 @Repository
-public interface StudentJpaRespository extends JpaRepository<Student, Integer>{
+public interface StudentRespository extends JpaRepository<Student, Long> {
 
 }

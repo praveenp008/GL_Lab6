@@ -6,12 +6,13 @@ import com.greatlearning.student.model.Student;
 
 public interface StudentService {
 
-	List<Student> getStudents();
-
 	Student createStudent(Student student);
 
-	Student updateStudent(long id);
+	List<Student> getAllStudents();
+
+	Student getStudentById(long id);
+
+	Student updateStudent(Student student, long id);
 
 	void deleteStudent(long id);
-
 }

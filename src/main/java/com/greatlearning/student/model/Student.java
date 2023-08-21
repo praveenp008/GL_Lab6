@@ -1,72 +1,60 @@
 package com.greatlearning.student.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Table(name = "students")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Student {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-
-	@Column(name = "first_Name")
+	private long id;
+	@Column(name = "first_name")
 	private String firstName;
-
-	@Column(name = "last_Name")
+	@Column(name = "last_name")
 	private String lastName;
-
 	@Column(name = "course")
 	private String course;
-
 	@Column(name = "country")
 	private String country;
-
-	public Integer getId() {
-		return id;
+	public long getId() {
+		return this.id;
 	}
-
-	public void setId(Integer id) {
+	public String getFirstName() {
+		return this.firstName;
+	}
+	public String getLastName() {
+		return this.lastName;
+	}
+	public String getCourse() {
+		return this.course;
+	}
+	public String getCountry() {
+		return this.country;
+	}
+	public void setId(long id) {
 		this.id = id;
 	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-
-	public String getCourse() {
-		return course;
-	}
-
 	public void setCourse(String course) {
 		this.course = course;
 	}
-
-	public String getCountry() {
-		return country;
-	}
-
 	public void setCountry(String country) {
 		this.country = country;
 	}
